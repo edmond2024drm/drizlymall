@@ -27,7 +27,7 @@ const Search = async ({ searchParams }) => {
       {data.length !== 0 && (
         <>
           <div className="my-8 font-medium text-xl sm:px-6 flex items-center justify-center sm:justify-start">
-            <h1>Rezultatet për {`"${q}"`}</h1>
+            <h1>Rezultatet për {`&quot;${q}&quot;`}</h1>
           </div>
           <div className="mt-6 grid md:grid-cols-4 lg:grid-cols-5 sm:min-h-[calc(100vh-200px)] sm:px-6">
             <div className="col-span-1">
@@ -48,7 +48,9 @@ const Search = async ({ searchParams }) => {
           </div>
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-2xl text-center sm:text-3xl mb-4">
-              Nuk u gjet asnjë rezultat për "{`${q}`}"
+              <h1 className="text-2xl text-center sm:text-3xl mb-4">
+                Nuk u gjet asnjë rezultat për &quot;{`${q}`}&quot;
+              </h1>
             </h1>
             <p className="text-sm sm:text-base text-center text-neutral-800 mb-6 max-w-80 sm:max-w-full">
               Kërkoni më lart për të gjetur atë që kërkoni, ose shkoni{" "}

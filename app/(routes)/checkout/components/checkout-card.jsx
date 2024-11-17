@@ -9,10 +9,7 @@ const CheckoutCard = ({ data }) => {
       <div className="relative w-20 h-20 overflow-hidden rounded-md sm:h-32 sm:w-32">
         <Image
           fill
-          src={
-            process.env.NEXT_PUBLIC_API_URL +
-            data.image.url
-          }
+          src={process.env.NEXT_PUBLIC_API_URL + data?.image?.url}
           alt=""
           className="object-contain object-center"
         />
@@ -21,10 +18,10 @@ const CheckoutCard = ({ data }) => {
         <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 gap-y-4 sm:pr-0">
           <div className="flex flex-col gap-y-6">
             <p className="text-lg font-semibold text-black sm:text-xl md:text-2xl">
-              {data.title}
+              {data?.title}
             </p>
             <p className="opacity-50 hidden sm:flex max-w-[90%]">
-              {data.description.substr(0, 100)} ...
+              {data?.description?.substr(0, 100)} ...
             </p>
           </div>
           <div className="flex flex-col mt-3 text-xs sm:items-end sm:text-sm sm:mt-0">

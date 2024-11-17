@@ -40,6 +40,7 @@ import { cn } from "@/lib/utils";
 import { v4 as uuidv4 } from "uuid";
 import useCheckout from "@/hooks/use-checkout";
 import HiddenForm from "@/components/hidden-form";
+import Currency from "@/app/(routes)/checkout/components/currency";
 
 const FormContent = () => {
   const [shteti, setShteti] = useState();
@@ -448,11 +449,32 @@ const FormContent = () => {
                 </FormItem>
               )}
             />
+          </div>
+          <div className="flex justify-between w-full items-start flex-col gap-y-8">
+            <div className="w-full mt-6 border border-gray-200 rounded-md">
+              <div className="flex items-center justify-between px-6 py-8">
+                <p className="text-sm font-medium sm:text-3xl">
+                  Totali i porosisë +{" "}
+                  <span className="block sm:inline">Transporti:</span>
+                </p>
+                <Currency
+                  value={
+                    shteti === "kosovë"
+                      ? total + 1.5
+                      : shteti === "shqipëri"
+                      ? total + 3.5
+                      : shteti === "maqedoni"
+                      ? total + 3.5
+                      : total
+                  }
+                />
+              </div>
+            </div>
 
             <Button
               type="submit"
               disabled={checkout.length === 0}
-              className="w-full sm:w-[20%]"
+              className="w-full sm:w-[15%]"
             >
               Blej tani
             </Button>

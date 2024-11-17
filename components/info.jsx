@@ -116,10 +116,10 @@ const Info = ({ data }) => {
             </div>
 
             <p className="mt-3 mb-2 text-xs text-neutral-700">
-              Disponueshmëria e produktit :{" "}
-              <span className="text-xs font-bold text-black">
-                {data?.stock}
-              </span>
+              Disponueshmëria:{" "}
+              {data?.stock > 10
+                ? "Më shumë se 10 artikuj"
+                : "Më pak se 10 artikuj"}
             </p>
 
             <div className="flex items-center justify-center w-full mb-5 sm:justify-start">

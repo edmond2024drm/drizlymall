@@ -2,13 +2,7 @@
 
 const nextConfig = {
   images: {
-    domains: ['localhost:1337'],
-    remotePatterns: [
-      {
-        protocol: "http",
-        hostname: "localhost",
-      },
-    ],
+    domains: ["strapiadmin.drizlymall.co"],
   },
 };
 
